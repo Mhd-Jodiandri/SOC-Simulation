@@ -1,0 +1,6 @@
+timestamp,agent.name,rule.description,rule.level,rule.id
+"Aug 3, 2026 @ 19:08:59.860",windows10-lab,Logon Failure - Unknown user or bad password,5,60122
+"Aug 3, 2026 @ 19:08:59.829",windows10-lab,Logon Failure - Unknown user or bad password,5,60122
+"Aug 3, 2026 @ 19:08:59.813",windows10-lab,Logon Failure - Unknown user or bad password,5,60122
+"Aug 3, 2026 @ 19:08:59.812",windows10-lab,Logon Failure - Unknown user or bad password,5,60122
+"Aug 3, 2026 @ 19:08:59.786",windows10-lab,Logon Failure - Unknown user or bad password,5,60122
