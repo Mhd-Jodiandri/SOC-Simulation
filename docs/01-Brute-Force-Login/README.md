@@ -1,4 +1,3 @@
-````markdown
 # Scenario 01 - SMB Brute Force Login Detection
 
 ## 📖 Overview
@@ -219,4 +218,7 @@ This scenario successfully demonstrated the detection of an SMB brute force atta
 Failed authentication attempts generated Windows Security Event ID 4625, which was successfully collected by the Wazuh agent and made available for SOC investigation.
 
 The scenario validates the complete detection workflow from attack simulation through security monitoring and provides a foundation for future detection engineering and threat hunting exercises.
-````
+
+```
+
+```
