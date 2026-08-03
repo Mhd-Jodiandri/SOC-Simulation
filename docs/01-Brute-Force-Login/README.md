@@ -169,11 +169,10 @@ Successful detection of failed SMB authentication attempts.
 
 # 📂 Collected Logs
 
-| File               | Description              |
-| ------------------ | ------------------------ |
-| event4625.xml      | Windows Security Event   |
-| wazuh-alert.json   | Wazuh Raw Alert          |
-| netexec-output.txt | NetExec Execution Output |
+| File             | Description            |
+| ---------------- | ---------------------- |
+| event4625.xml    | Windows Security Event |
+| wazuh-alert.json | Wazuh Raw Alert        |
 
 ---
 
