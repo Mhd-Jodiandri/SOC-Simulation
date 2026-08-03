@@ -151,7 +151,7 @@ Successful detection of failed SMB authentication attempts.
 
 ## NetExec Execution
 
-![NetExec Brute Force](Screenshots/NetExec-Brute%20Froce.png)
+![NetExec Brute Force](Screenshots/NetExec-Brute-Froce.png)
 
 ---
 
