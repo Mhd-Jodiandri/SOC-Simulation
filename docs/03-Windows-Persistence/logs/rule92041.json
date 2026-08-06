@@ -1,0 +1,103 @@
+{
+  "_index": "wazuh-alerts-4.x-2026.08.06",
+  "_id": "TPXo1Z8BCgdMmylq_L0c",
+  "_score": null,
+  "_source": {
+    "input": {
+      "type": "log"
+    },
+    "agent": {
+      "ip": "192.168.56.20",
+      "name": "windows10-lab",
+      "id": "001"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "data": {
+      "win": {
+        "eventdata": {
+          "originalFileName": "reg.exe",
+          "image": "C:\\\\Windows\\\\System32\\\\reg.exe",
+          "product": "Microsoft® Windows® Operating System",
+          "parentProcessGuid": "{38e31281-29ee-6a74-8202-000000000e00}",
+          "description": "Registry Console Tool",
+          "logonGuid": "{38e31281-1e0e-6a74-a851-080000000000}",
+          "parentCommandLine": "\\\"C:\\\\Windows\\\\system32\\\\cmd.exe\\\"",
+          "processGuid": "{38e31281-3115-6a74-a302-000000000e00}",
+          "logonId": "0x851a8",
+          "parentProcessId": "6388",
+          "processId": "3548",
+          "currentDirectory": "C:\\\\Windows\\\\system32\\\\",
+          "utcTime": "2026-08-06 07:00:37.233",
+          "hashes": "MD5=227F63E1D9008B36BDBCC4B397780BE4,SHA256=C0E25B1F9B22DE445298C1E96DDFCEAD265CA030FA6626F61A4A4786CC4A3B7D,IMPHASH=BE482BE427FE212CFEF2CDA0E61F19AC",
+          "parentImage": "C:\\\\Windows\\\\System32\\\\cmd.exe",
+          "company": "Microsoft Corporation",
+          "commandLine": "reg  add \\\"HKCU\\\\Software\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Run\\\" /v SOCSimulation /t REG_SZ /d \\\"C:\\\\Windows\\\\System32\\\\notepad.exe\\\" /f",
+          "integrityLevel": "High",
+          "fileVersion": "10.0.19041.1 (WinBuild.160101.0800)",
+          "user": "WIN10-SOC\\\\Joyz",
+          "terminalSessionId": "1",
+          "parentUser": "WIN10-SOC\\\\Joyz"
+        },
+        "system": {
+          "eventID": "1",
+          "keywords": "0x8000000000000000",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "level": "4",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "opcode": "0",
+          "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2026-08-06 07:00:37.233\r\nProcessGuid: {38e31281-3115-6a74-a302-000000000e00}\r\nProcessId: 3548\r\nImage: C:\\Windows\\System32\\reg.exe\r\nFileVersion: 10.0.19041.1 (WinBuild.160101.0800)\r\nDescription: Registry Console Tool\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: reg.exe\r\nCommandLine: reg  add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\" /v SOCSimulation /t REG_SZ /d \"C:\\Windows\\System32\\notepad.exe\" /f\r\nCurrentDirectory: C:\\Windows\\system32\\\r\nUser: WIN10-SOC\\Joyz\r\nLogonGuid: {38e31281-1e0e-6a74-a851-080000000000}\r\nLogonId: 0x851A8\r\nTerminalSessionId: 1\r\nIntegrityLevel: High\r\nHashes: MD5=227F63E1D9008B36BDBCC4B397780BE4,SHA256=C0E25B1F9B22DE445298C1E96DDFCEAD265CA030FA6626F61A4A4786CC4A3B7D,IMPHASH=BE482BE427FE212CFEF2CDA0E61F19AC\r\nParentProcessGuid: {38e31281-29ee-6a74-8202-000000000e00}\r\nParentProcessId: 6388\r\nParentImage: C:\\Windows\\System32\\cmd.exe\r\nParentCommandLine: \"C:\\Windows\\system32\\cmd.exe\" \r\nParentUser: WIN10-SOC\\Joyz\"",
+          "version": "5",
+          "systemTime": "2026-08-06T07:00:37.2534657Z",
+          "eventRecordID": "4629",
+          "threadID": "4360",
+          "computer": "WIN10-SOC",
+          "task": "1",
+          "processID": "3040",
+          "severityValue": "INFORMATION",
+          "providerName": "Microsoft-Windows-Sysmon"
+        }
+      }
+    },
+    "rule": {
+      "firedtimes": 1,
+      "mail": false,
+      "level": 10,
+      "description": "Value added to registry key has Base64-like pattern",
+      "groups": [
+        "sysmon",
+        "sysmon_eid1_detections",
+        "windows"
+      ],
+      "mitre": {
+        "technique": [
+          "Obfuscated Files or Information",
+          "Modify Registry"
+        ],
+        "id": [
+          "T1027",
+          "T1112"
+        ],
+        "tactic": [
+          "Defense Evasion"
+        ]
+      },
+      "id": "92041"
+    },
+    "location": "EventChannel",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "id": "1786000241.935048",
+    "timestamp": "2026-08-06T14:10:41.981+0700"
+  },
+  "fields": {
+    "timestamp": [
+      "2026-08-06T07:10:41.981Z"
+    ]
+  },
+  "sort": [
+    1786000241981
+  ]
+}

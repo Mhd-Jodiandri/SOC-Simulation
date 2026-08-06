@@ -1,0 +1,89 @@
+{
+  "_index": "wazuh-alerts-4.x-2026.08.06",
+  "_id": "S_Xo1Z8BCgdMmylq_L0c",
+  "_score": null,
+  "_source": {
+    "input": {
+      "type": "log"
+    },
+    "agent": {
+      "ip": "192.168.56.20",
+      "name": "windows10-lab",
+      "id": "001"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "data": {
+      "win": {
+        "eventdata": {
+          "image": "C:\\\\Windows\\\\system32\\\\reg.exe",
+          "targetObject": "HKU\\\\S-1-5-21-2288395983-4160330323-3888028376-1001\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Run\\\\SOCSimulation",
+          "processGuid": "{38e31281-3115-6a74-a302-000000000e00}",
+          "processId": "3548",
+          "utcTime": "2026-08-06 07:00:37.261",
+          "ruleName": "T1060,RunKey",
+          "details": "C:\\\\Windows\\\\System32\\\\notepad.exe",
+          "eventType": "SetValue",
+          "user": "WIN10-SOC\\\\Joyz"
+        },
+        "system": {
+          "eventID": "13",
+          "keywords": "0x8000000000000000",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "level": "4",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "opcode": "0",
+          "message": "\"Registry value set:\r\nRuleName: T1060,RunKey\r\nEventType: SetValue\r\nUtcTime: 2026-08-06 07:00:37.261\r\nProcessGuid: {38e31281-3115-6a74-a302-000000000e00}\r\nProcessId: 3548\r\nImage: C:\\Windows\\system32\\reg.exe\r\nTargetObject: HKU\\S-1-5-21-2288395983-4160330323-3888028376-1001\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\SOCSimulation\r\nDetails: C:\\Windows\\System32\\notepad.exe\r\nUser: WIN10-SOC\\Joyz\"",
+          "version": "2",
+          "systemTime": "2026-08-06T07:00:37.2617806Z",
+          "eventRecordID": "4630",
+          "threadID": "4360",
+          "computer": "WIN10-SOC",
+          "task": "13",
+          "processID": "3040",
+          "severityValue": "INFORMATION",
+          "providerName": "Microsoft-Windows-Sysmon"
+        }
+      }
+    },
+    "rule": {
+      "firedtimes": 1,
+      "mail": false,
+      "level": 6,
+      "description": "Registry entry to be executed on next logon was modified using command line application reg.exe",
+      "groups": [
+        "sysmon",
+        "sysmon_eid13_detections",
+        "windows"
+      ],
+      "mitre": {
+        "technique": [
+          "Registry Run Keys / Startup Folder"
+        ],
+        "id": [
+          "T1547.001"
+        ],
+        "tactic": [
+          "Persistence",
+          "Privilege Escalation"
+        ]
+      },
+      "id": "92302"
+    },
+    "location": "EventChannel",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "id": "1786000241.932039",
+    "timestamp": "2026-08-06T14:10:41.981+0700"
+  },
+  "fields": {
+    "timestamp": [
+      "2026-08-06T07:10:41.981Z"
+    ]
+  },
+  "sort": [
+    1786000241981
+  ]
+}

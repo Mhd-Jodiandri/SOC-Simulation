@@ -160,7 +160,7 @@ SOC Investigation
 - [x] Sysmon Installation
 - [x] Baseline Monitoring
 - [x] Scenario 01 – SMB Brute Force Login
-- [ ] Scenario 02 – PowerShell Malware Execution
+- [x] Scenario 02 – PowerShell Execution Detection
 - [ ] Scenario 03 – Windows Persistence
 - [ ] Scenario 04 – Privilege Escalation
 - [ ] Scenario 05 – Credential Dumping
