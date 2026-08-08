@@ -97,9 +97,9 @@ Rather than focusing on offensive exploitation, this project emphasizes **Detect
 | No  | Scenario                        | MITRE ATT&CK | Status         |
 | --- | ------------------------------- | ------------ | -------------- |
 | 01  | SMB Brute Force Login Detection | T1110        | ✅ Completed   |
-| 02  | PowerShell Malware Execution    | T1059.001    | 🚧 In Progress |
-| 03  | Windows Persistence             | T1547        | ⏳ Planned     |
-| 04  | Privilege Escalation            | T1068        | ⏳ Planned     |
+| 02  | PowerShell Malware Execution    | T1059.001    | ✅ Completed   |
+| 03  | Windows Persistence             | T1547        | ✅ Completed   |
+| 04  | Privilege Escalation            | T1068        | 🚧 In Progress |
 | 05  | Credential Dumping              | T1003        | ⏳ Planned     |
 | 06  | Defense Evasion                 | T1562        | ⏳ Planned     |
 | 07  | Scheduled Task Persistence      | T1053        | ⏳ Planned     |
@@ -143,8 +143,8 @@ SOC Investigation
 | Tactic               | Technique                             | Technique ID | Status |
 | -------------------- | ------------------------------------- | ------------ | ------ |
 | Credential Access    | Brute Force                           | T1110        | ✅     |
-| Execution            | PowerShell                            | T1059.001    | ⏳     |
-| Persistence          | Registry Run Keys / Startup Folder    | T1547        | ⏳     |
+| Execution            | PowerShell                            | T1059.001    | ✅     |
+| Persistence          | Registry Run Keys / Startup Folder    | T1547        | ✅     |
 | Privilege Escalation | Exploitation for Privilege Escalation | T1068        | ⏳     |
 | Credential Access    | OS Credential Dumping                 | T1003        | ⏳     |
 | Defense Evasion      | Impair Defenses                       | T1562        | ⏳     |
@@ -161,7 +161,7 @@ SOC Investigation
 - [x] Baseline Monitoring
 - [x] Scenario 01 – SMB Brute Force Login
 - [x] Scenario 02 – PowerShell Execution Detection
-- [ ] Scenario 03 – Windows Persistence
+- [x] Scenario 03 – Windows Persistence
 - [ ] Scenario 04 – Privilege Escalation
 - [ ] Scenario 05 – Credential Dumping
 - [ ] Scenario 06 – Defense Evasion
