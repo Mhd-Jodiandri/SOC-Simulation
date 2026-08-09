@@ -1,0 +1,74 @@
+{
+  "_index": "wazuh-alerts-4.x-2026.08.09",
+  "_id": "AYIX5p8BHcU1QlxOR3Pk",
+  "_score": null,
+  "_source": {
+    "input": {
+      "type": "log"
+    },
+    "agent": {
+      "ip": "192.168.56.20",
+      "name": "windows10-lab",
+      "id": "001"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "data": {
+      "win": {
+        "eventdata": {
+          "image": "C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+          "targetObject": "HKU\\\\S-1-5-21-2288395983-4160330323-3888028376-1001_Classes\\\\ms-settings\\\\Shell\\\\Open\\\\command\\\\(Default)",
+          "processGuid": "{38e31281-5794-6a78-2a02-000000001100}",
+          "processId": "6280",
+          "utcTime": "2026-08-09 10:35:07.698",
+          "ruleName": "T1042",
+          "details": "cmd.exe /c whoami &gt; C:\\\\Users\\\\Public\\\\uac-bypass-test.txt",
+          "eventType": "SetValue",
+          "user": "WIN10-SOC\\\\Joyz"
+        },
+        "system": {
+          "eventID": "13",
+          "keywords": "0x8000000000000000",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "level": "4",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "opcode": "0",
+          "message": "\"Registry value set:\r\nRuleName: T1042\r\nEventType: SetValue\r\nUtcTime: 2026-08-09 10:35:07.698\r\nProcessGuid: {38e31281-5794-6a78-2a02-000000001100}\r\nProcessId: 6280\r\nImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetObject: HKU\\S-1-5-21-2288395983-4160330323-3888028376-1001_Classes\\ms-settings\\Shell\\Open\\command\\(Default)\r\nDetails: cmd.exe /c whoami > C:\\Users\\Public\\uac-bypass-test.txt\r\nUser: WIN10-SOC\\Joyz\"",
+          "version": "2",
+          "systemTime": "2026-08-09T10:35:07.7181549Z",
+          "eventRecordID": "7817",
+          "threadID": "4456",
+          "computer": "WIN10-SOC",
+          "task": "13",
+          "processID": "3032",
+          "severityValue": "INFORMATION",
+          "providerName": "Microsoft-Windows-Sysmon"
+        }
+      }
+    },
+    "rule": {
+      "firedtimes": 2,
+      "mail": true,
+      "level": 12,
+      "description": "Command interpreter added to registry key associated to UAC bypass by auto-elevated processes",
+      "groups": ["sysmon", "sysmon_eid13_detections", "windows"],
+      "mitre": {
+        "technique": ["Bypass User Account Control", "Modify Registry"],
+        "id": ["T1548.002", "T1112"],
+        "tactic": ["Privilege Escalation", "Defense Evasion"]
+      },
+      "id": "92305"
+    },
+    "location": "EventChannel",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "id": "1786271708.366821",
+    "timestamp": "2026-08-09T17:35:08.605+0700"
+  },
+  "fields": {
+    "timestamp": ["2026-08-09T10:35:08.605Z"]
+  },
+  "sort": [1786271708605]
+}
