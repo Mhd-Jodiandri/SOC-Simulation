@@ -1,5 +1,12 @@
 # Scenario 4 — Privilege Escalation Detection
 
+![Status](https://img.shields.io/badge/Status-Completed-success)
+![Platform](https://img.shields.io/badge/Platform-Windows%2010-blue)
+![SIEM](https://img.shields.io/badge/SIEM-Wazuh-0266C8)
+![Telemetry](https://img.shields.io/badge/Telemetry-Sysmon-orange)
+
+---
+
 This scenario focuses on detecting an **attempted privilege escalation attack on a Windows 10 endpoint** using a **User Account Control (UAC) bypass technique involving `fodhelper.exe`**.
 
 The simulation was designed to reproduce attacker behavior involving Registry modification and evaluate whether endpoint telemetry and SIEM monitoring could identify the activity.
