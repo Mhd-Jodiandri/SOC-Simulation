@@ -1,5 +1,11 @@
 # Scenario 01 - SMB Brute Force Login Detection
 
+![Status](https://img.shields.io/badge/Status-Completed-success)
+![Platform](https://img.shields.io/badge/Platform-Windows%2010-blue)
+![SIEM](https://img.shields.io/badge/SIEM-Wazuh-0266C8)
+![Telemetry](https://img.shields.io/badge/Telemetry-Sysmon-orange)
+![Kali Linux](https://img.shields.io/badge/Attacker-Kali-linux)
+
 ## 📖 Overview
 
 This scenario simulates an SMB brute force attack against a Windows 10 endpoint using **NetExec** from a Kali Linux attacker machine.
