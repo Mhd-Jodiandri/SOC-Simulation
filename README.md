@@ -100,8 +100,8 @@ Rather than focusing on offensive exploitation, this project emphasizes **Detect
 | 02  | PowerShell Malware Execution    | T1059.001    | ✅ Completed   |
 | 03  | Windows Persistence             | T1547        | ✅ Completed   |
 | 04  | Privilege Escalation            | T1068        | ✅ Completed   |
-| 05  | Credential Dumping              | T1003        | 🚧 In Progress |
-| 06  | Defense Evasion                 | T1562        | ⏳ Planned     |
+| 05  | Credential Dumping              | T1003        | ✅ Completed   |
+| 06  | Defense Evasion                 | T1562        | 🚧 In Progress |
 | 07  | Scheduled Task Persistence      | T1053        | ⏳ Planned     |
 | 08  | Ransomware Behavior Simulation  | T1486        | ⏳ Planned     |
 | 09  | Threat Hunting Investigation    | Multiple     | ⏳ Planned     |
@@ -146,7 +146,7 @@ SOC Investigation
 | Execution            | PowerShell                            | T1059.001    | ✅     |
 | Persistence          | Registry Run Keys / Startup Folder    | T1547        | ✅     |
 | Privilege Escalation | Exploitation for Privilege Escalation | T1068        | ❌     |
-| Credential Access    | OS Credential Dumping                 | T1003        | ⏳     |
+| Credential Access    | OS Credential Dumping                 | T1003        | ✅     |
 | Defense Evasion      | Impair Defenses                       | T1562        | ⏳     |
 | Persistence          | Scheduled Task                        | T1053        | ⏳     |
 
@@ -163,7 +163,7 @@ SOC Investigation
 - [x] Scenario 02 – PowerShell Execution Detection
 - [x] Scenario 03 – Windows Persistence
 - [x] Scenario 04 – Privilege Escalation
-- [ ] Scenario 05 – Credential Dumping
+- [x] Scenario 05 – Credential Dumping
 - [ ] Scenario 06 – Defense Evasion
 - [ ] Scenario 07 – Scheduled Tasks
 - [ ] Scenario 08 – Ransomware Simulation
